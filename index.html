@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="styles.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Admin Dashboard Panel</title>--> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="l.png" alt="">
+            </div>
+
+            <span class="logo_name">Martech Cloud</span>
+        </div>
+        
+        
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="index.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Overview</span>
+                </a></li>
+                <li><a href="crud.html">
+                    <i class="uil uil-database"></i>
+                    <span class="link-name">Audience</span>
+                </a></li>
+                <li><a href="sn_dashboard.html">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Analytics</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Messenger</span>
+                </a></li>
+                <li><a href="help.html">
+                    <i class="uil uil-search"></i>
+                    <span class="link-name">Help</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Estimate Billing</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="https://martechcloud.github.io/main/">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+    
+            <a href="#" class="profile">
+				<img src="sn.jpg" alt="" width="45" height="40">
+			</a>
+        </div>
+
+        <div class="dash-content">
+            <div class="home-content">
+                <div class="overview-boxes">
+
+                    <style>
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    </style>
+          
+                  <iframe id="my-iframe" src="https://lookerstudio.google.com/embed/reporting/44162e24-7fce-4e01-b61a-f55ef102d507/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>
+                 <br>
+        
+            </div>
+
+            <script>
+                window.onload = function() {
+                    var iframe = document.getElementById('my-iframe');
+                    var deviceHeight = window.innerHeight;
+                    var deviceWidth = window.innerWidth;
+        
+                    if (deviceWidth >= 768) {
+                        iframe.style.width = '1180px';
+                    }
+                    iframe.style.height = deviceHeight + 'px';
+                    
+                    window.addEventListener('resize', function() {
+                        deviceHeight = window.innerHeight;
+                        deviceWidth = window.innerWidth;
+                        iframe.style.height = deviceHeight + 'px';
+                        if (deviceWidth >= 768) {
+                            iframe.style.width = '1180px';
+                        } else {
+                            iframe.style.width = '100%';
+                        }
+                    });
+                };
+            </script>
+              
+              
+              
+              
+        </div>
+    </section>
+
+    <--<script src="scripts.js"></script>-->
+</body>
+</html>
